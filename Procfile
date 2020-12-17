@@ -1,0 +1,1 @@
+web: python main.py && python -m pip install -r requirements.txt && clear
