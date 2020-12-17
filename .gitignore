@@ -6,7 +6,7 @@ __pycache__/
 
 # C extensions
 *.so
-
+ForMe.txt
 # Distribution / packaging
 .Python
 build/
