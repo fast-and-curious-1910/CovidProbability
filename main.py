@@ -1,5 +1,7 @@
 from flask import Flask , render_template
 import pickle
+
+import flask
 import src.training as training
 app = Flask('Covid Infection Probability Detector')
 
@@ -17,7 +19,7 @@ def main():
 
 @app.errorhandler(404)
 def err(error):
-    return 404
+    return flask.Response(status=404)
 
 
 
