@@ -14,7 +14,15 @@ def main():
     infProb = clf.predict_proba([inputf])[0][1]
     return render_template('index.html')
 
+
+@app.errorhandler(404)
+def err(error):
+    return 404
+
+
+
+
 if __name__ == "__main__":
-    app.run(debug=True,port=5000)
+    app.run(debug=False,port=5000)
 
 
