@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+
+
+
+
+    <title>Covid Detector</title>
+
+    <style>
+        .footer {
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            align-items: center;
+            background-color: rgb(2, 64, 248);
+            color: white;
+            text-align: center;
+        }
+
+        .container-fluid {
+            margin: auto;
+            width: 60%;
+            border: 5px solid none;
+            padding: 10px;
+        }
+
+        .container {
+            margin-top: 20px;
+        }
+
+        form {
+            margin: 50px 200px 150px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+    </style>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Coronavirus Detector</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="/">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">About</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="text-center">
+            Coronavirus Detector
+        </h1>
+
+        <h2 class="text-center">
+            Patients Probabily for infection is {{inf}} % 
+        </h2>
+
+    </div>
+    <footer>
+        <div class="footer">
+            <p>Made By Palash Sureka </p>
+        </div>
+
+    </footer>
+
+</html>

@@ -83,18 +83,18 @@
 <form action="/" method="POST">
     <div class="form-group" id='feverdiv'>
         <label for="fever">Fever Value</label>
-        <input type="number" class="form-control" id="fever" name='fever'placeholder="Ex : 99.9">
+        <input type="number" class="form-control" id="fever" name='fever'placeholder="Ex : 99.9" required>
     </div>
 
     <div class="form-group" id='agediv'>
         <label for="age"> Age </label>
-        <input type="number" class="form-control" id="age" name='age' placeholder="Ex : 43">
+        <input type="number" class="form-control" id="age" name='age' placeholder="Ex : 43" required>
     </div>
 
 
     <div class="form-group" id="paindiv">
         <label for='pain'>Body Pain</label>
-        <select class="form-control" id="pain" name="pain">
+        <select class="form-control" id="pain" name="pain" required>
             <option value="0">None</option>
             <option value="1">Severe / Medium Pain</option>
         </select>
@@ -102,7 +102,7 @@
     
     <div class="form-group" id='nosediv'>
         <label for='runnyNose'>Runny Nose</label>
-        <select class="form-control" id="runnyNose" name="runnyNose">
+        <select class="form-control" id="runnyNose" name="runnyNose" required>
             <option value="0">Not a runny nose</option>
             <option value="1"> Runny Nose</option>
         </select>
@@ -111,7 +111,7 @@
     <div class="form-group" id='breathdiv'>
         <label for='diffBreath'>Difficulty in breathing
         </label>
-        <select class="form-control" id="diffBreath" name="diffBreath">
+        <select class="form-control" id="diffBreath" name="diffBreath" required>
             <option value="-1">No Difficulty</option>
             <option value='0'>Not a lot , but still there</option>
             <option value="1"> Very difficult breathing</option>
