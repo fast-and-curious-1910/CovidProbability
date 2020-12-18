@@ -4,7 +4,7 @@ import pickle
 from sklearn.linear_model import LogisticRegression
 
 
-df = pd.read_csv('src/data.csv')
+df = pd.read_csv('data/data.csv')
 
 
 def data_split(data, ratio: float):
@@ -39,7 +39,7 @@ if __name__ == "__main__":
 
     clf.fit(x_train, y_train)
 
-    picklefile = open('src/data.pickle','wb')
+    picklefile = open('data/data.pickle','wb')
 
 
     # pickle.load(picklefile)

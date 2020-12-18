@@ -22,7 +22,7 @@
         bottom: 0;
         width: 100%;
         align-items: center;
-        background-color: royalblue;
+        background-color: rgb(2, 64, 248);
         color: white;
         text-align: center;
         }
@@ -37,8 +37,13 @@
         }
 
         form {
-            margin: 100px 100px 100px ;
+            margin: 50px 200px 150px ;
         }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
 
 
     </style>
@@ -75,44 +80,49 @@
     </div>
 
 
-<form>
-    <div class="form-group">
+<form action="/" method="POST">
+    <div class="form-group" id='feverdiv'>
         <label for="fever">Fever Value</label>
         <input type="number" class="form-control" id="fever" name='fever'placeholder="Ex : 99.9">
     </div>
 
-    <div class="form-group">
-        <label for="age">Fever Value</label>
+    <div class="form-group" id='agediv'>
+        <label for="age"> Age </label>
         <input type="number" class="form-control" id="age" name='age' placeholder="Ex : 43">
     </div>
 
 
-    <div class="form-group">
-        <label for='pain'>Example select</label>
+    <div class="form-group" id="paindiv">
+        <label for='pain'>Body Pain</label>
         <select class="form-control" id="pain">
-            <option>None</option>
-            <option>Medium</option>
-            <option>Severe</option>
+            <option value="0">None</option>
+            <option value="1">Severe / Medium Pain</option>
         </select>
     </div>
-    <div class="form-group">
-        <label for="exampleFormControlSelect2">Example multiple select</label>
-        <select multiple class="form-control" id="exampleFormControlSelect2">
-            <option>1</option>
-            <option>2</option>
-            <option>3</option>
-            <option>4</option>
-            <option>5</option>
+    
+    <div class="form-group" id='nosediv'>
+        <label for='runnyNose'>Runny Nose</label>
+        <select class="form-control" id="runnyNose">
+            <option value="0">Not a runny nose</option>
+            <option value="1"> Runny Nose</option>
         </select>
     </div>
-    <div class="form-group">
-        <label for="exampleFormControlTextarea1">Example textarea</label>
-        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+
+    <div class="form-group" id='breathdiv'>
+        <label for='diffBreath'>Difficulty in breathing
+        </label>
+        <select class="form-control" id="diffBreath">
+            <option value="-1">No Difficulty</option>
+            <option value='0'>Not a lot , but still there</option>
+            <option value="1"> Very difficult breathing</option>
+        </select>
     </div>
+    <button type="submit" class="btn btn-danger"> Submit </button>
+
 </form>
 <footer>
     <div class="footer">
-        <p>Made By Palash Sureka || <a href='https://github.com/fast-and-curious-1910/CovidProbability'> GitHub</a> </p>
+        <p>Made By Palash Sureka </p>
     </div>
 
 </footer>

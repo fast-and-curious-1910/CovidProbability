@@ -1,12 +1,12 @@
-from flask import Flask , render_template
+from flask import Flask , render_template , redirect
 import pickle
-
+import os
 import flask
 import src.training as training
 
 app = Flask('Covid Infection Probability Detector')
-
-picklefile = open('src/data.pickle', 'rb')
+picklefilepath = './data/data.pickle'
+picklefile = open(picklefilepath, 'rb')
 
 clf = pickle.load(file=picklefile)
 
@@ -22,10 +22,18 @@ def main():
 def err(error):
     return flask.Response(status=404)
 
+@app.route('/github')
+def redirect_to_github():
 
+    return redirect('https://github.com/fast-and-curious-1910/CovidProbability', code=302)
+
+@app.route('/source')
+def redirect_to_github2():
+
+    return redirect('https://github.com/fast-and-curious-1910/CovidProbability', code=302)
 
 
 if __name__ == "__main__":
-    app.run(debug=False,port=5000,host='0.0.0.0')
+    app.run(debug=False,port=5000,host='localhost')
 
 
