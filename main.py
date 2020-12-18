@@ -16,7 +16,6 @@ picklefile.close()
 @app.route('/', methods=['POST', 'GET'])
 def main():
     if request.method == 'POST':
-        
 
         mainDict1 = request.form
         fever = int(mainDict1['fever'])
@@ -25,12 +24,10 @@ def main():
         runnyNose = int(mainDict1['runnyNose'])
         diffBreath = int(mainDict1['diffBreath'])
 
-
-        inputf = [fever,pain, age, runnyNose, diffBreath]
+        inputf = [fever, pain, age, runnyNose, diffBreath]
         # inputf = "i like cheese"
         infProb = clf.predict_proba([inputf])[0][1]
-        return render_template('showProb.html',inf=round(infProb*100))
-
+        return render_template('showProb.html', inf=round(infProb*100))
 
     return render_template('index.html')
 
