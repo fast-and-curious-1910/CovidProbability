@@ -3,6 +3,7 @@ import pickle
 
 import flask
 import src.training as training
+
 app = Flask('Covid Infection Probability Detector')
 
 picklefile = open('src/data.pickle', 'rb')
@@ -25,6 +26,6 @@ def err(error):
 
 
 if __name__ == "__main__":
-    app.run(debug=False,port=5000)
+    app.run(debug=False,port=5000,host='0.0.0.0')
 
 
