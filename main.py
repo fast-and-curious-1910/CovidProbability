@@ -1,4 +1,4 @@
-from flask import Flask , render_template , redirect
+from flask import Flask , render_template , redirect , request
 import pickle
 import os
 import flask
@@ -11,8 +11,17 @@ picklefile = open(picklefilepath, 'rb')
 clf = pickle.load(file=picklefile)
 
 picklefile.close()
-@app.route('/')
+@app.route('/' , methods=['POST','GET'])
 def main():
+    if request.method == 'POST':
+
+        mainDict1 = request.form
+        fever = int(mainDict1['fever'])
+        age = int(mainDict1['age'])
+        pain = int(mainDict1['pain'])
+        runnyNose = int(mainDict1['runnyNose'])
+        diffBreath = int(mainDict1['diffBreath'])
+
     inputf = [100, 1, 22, 1, 1]
     infProb = clf.predict_proba([inputf])[0][1]
     return render_template('index.html')
